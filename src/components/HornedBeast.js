@@ -54,11 +54,3 @@ export default HornedBeast ;
 
 
 
-
-
-/* <h2>{this.props.name}</h2>
-                <span>{this.state.votes}</span>
-                <img src={this.props.imageSrc} alt={this.props.alt} title={this.props.title} width="200" />
-                <span onClick={this.incrementVotes}>👍</span>
-                <p>{this.props.description}</p>
-                <p>{this.props.horns}</p> */
