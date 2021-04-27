@@ -25,7 +25,7 @@ class HornedBeast extends React.Component
     {
         return(
             
-                <Card style={{ width: '22rem'  , margin:'5em 0em 10em 3em' }} >
+                <Card style={{ width: '22rem'  , margin:'5em 0em 10em 3em' }}  >
                 <Card.Img variant="top" src={this.props.imageSrc} style={{height:"18rem"}} />
                 <Card.Body>
                 <Card.Title>{this.props.title}</Card.Title>
