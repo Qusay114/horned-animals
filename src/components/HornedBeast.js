@@ -2,7 +2,6 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css' ;
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import SelectedBeast from './SelectedBeast ';
 
 
 class HornedBeast extends React.Component
@@ -24,9 +23,9 @@ class HornedBeast extends React.Component
         );
     }
 
-    popCard = () => {
-        return this.props.popCards() ;
-    }
+    // popCard = () => {
+    //     return this.props.popCards() ;
+    // }
    
     render()
     {
@@ -39,7 +38,7 @@ class HornedBeast extends React.Component
                 {this.props.description}
                 </Card.Text>
                 <Card.Text>
-                <h2>{this.props.name}</h2>
+                {this.props.name}
                 </Card.Text>
                 <Card.Text>
                     it has {this.props.horns} horns
@@ -49,7 +48,9 @@ class HornedBeast extends React.Component
                 Votes Number: {this.state.votes}
                 </Card.Text>
             </Card.Body>
-            <SelectedBeast imageSrc={this.props.imageSrc} description={this.props.description} />
+            <Button variant="primary" name={this.props.title} onClick={this.props.popCard1} style={{position:'absolute' , bottom:'0%',left:'50%',transform:'translateX(-50%)'}}>
+                        Show more details
+                        </Button>
             </Card>
              
         )

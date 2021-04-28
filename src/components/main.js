@@ -2,7 +2,7 @@ import React from 'react';
 import HornedBeast from './HornedBeast';
 import dataFile from './assets/data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CardColumns from 'react-bootstrap/CardColumns'
+import CardColumns from 'react-bootstrap/CardColumns';
 
 
 class Main extends React.Component
@@ -15,14 +15,14 @@ class Main extends React.Component
         }
     }
 
- 
    
     render()
     {
         const coluomns = this.state.data.map(animal =>{
-            return (
-                        <HornedBeast name={animal.keyword} description={animal.description} imageSrc={animal.image_url} title={animal.title} horns={animal.horns}  />
-                   )
+            return ( 
+                        <HornedBeast key={animal.image_url} name={animal.keyword} description={animal.description} imageSrc={animal.image_url} title={animal.title} horns={animal.horns} popCard1={this.props.popCard} />
+    
+                    )
         })
         return(
         <div id='container'>
