@@ -3,8 +3,7 @@ import HornedBeast from './HornedBeast';
 import dataFile from './assets/data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardColumns from 'react-bootstrap/CardColumns'
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+
 
 class Main extends React.Component
 {
