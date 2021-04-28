@@ -1,3 +1,20 @@
+#  A Website to show horned animals 
+
+### Features :
+
+* Show the name , horns and the discription for the animal .
+
+* The ability to vote the animal with showing the number of votes .
+
+* The abitlity to show more details about the animal (pop up the animal)
+
+
+
+
+
+# Below detalis about the react app in general
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
