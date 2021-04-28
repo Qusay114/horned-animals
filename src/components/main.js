@@ -3,6 +3,8 @@ import HornedBeast from './HornedBeast';
 import dataFile from './assets/data.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CardColumns from 'react-bootstrap/CardColumns'
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 class Main extends React.Component
 {
@@ -15,16 +17,17 @@ class Main extends React.Component
     }
 
  
+   
     render()
     {
         const coluomns = this.state.data.map(animal =>{
-            return <CardColumns style={{display:'inline'}}>
-                        <HornedBeast name={animal.keyword} description={animal.description} imageSrc={animal.image_url} title={animal.title} horns={animal.horns} />
-                   </CardColumns>
+            return (
+                        <HornedBeast name={animal.keyword} description={animal.description} imageSrc={animal.image_url} title={animal.title} horns={animal.horns}  />
+                   )
         })
         return(
         <div id='container'>
-            {coluomns}   
+            <CardColumns>{coluomns} </CardColumns>
         </div>
         )
     }
