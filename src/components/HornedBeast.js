@@ -2,6 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css' ;
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import SelectedBeast from './SelectedBeast ';
+
 
 class HornedBeast extends React.Component
 {
@@ -21,13 +23,17 @@ class HornedBeast extends React.Component
             }
         );
     }
+
+    popCard = () => {
+        return this.props.popCards() ;
+    }
+   
     render()
     {
         return(
-            
-                <Card style={{ width: '22rem'  , margin:'5em 0em 10em 3em' }}  >
-                <Card.Img variant="top" src={this.props.imageSrc} style={{height:"18rem"}} />
-                <Card.Body>
+                <Card style={{ width: '22rem' ,height:'40rem' , margin:'5em 0em 10em 3em'  }}  >
+                <Card.Img variant="top" src={this.props.imageSrc} style={{height:"18rem"}}  />
+                <Card.Body style={{textAlign:'center'}}>
                 <Card.Title>{this.props.title}</Card.Title>
                 <Card.Text>
                 {this.props.description}
@@ -43,6 +49,7 @@ class HornedBeast extends React.Component
                 Votes Number: {this.state.votes}
                 </Card.Text>
             </Card.Body>
+            <SelectedBeast imageSrc={this.props.imageSrc} description={this.props.description} />
             </Card>
              
         )
@@ -54,11 +61,3 @@ export default HornedBeast ;
 
 
 
-
-
-/* <h2>{this.props.name}</h2>
-                <span>{this.state.votes}</span>
-                <img src={this.props.imageSrc} alt={this.props.alt} title={this.props.title} width="200" />
-                <span onClick={this.incrementVotes}>👍</span>
-                <p>{this.props.description}</p>
-                <p>{this.props.horns}</p> */
