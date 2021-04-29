@@ -23,10 +23,6 @@ class HornedBeast extends React.Component
         );
     }
 
-    // popCard = () => {
-    //     return this.props.popCards() ;
-    // }
-   
     render()
     {
         return(
