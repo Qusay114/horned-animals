@@ -8,6 +8,8 @@
 
 * The abitlity to show more details about the animal (pop up the animal)
 
+* The ability to filter the animals according to their horns
+
 
 
 

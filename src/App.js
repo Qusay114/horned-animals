@@ -1,5 +1,5 @@
 import React from 'react';
-import data from './components/assets/data.json'
+import JsonData from './components/assets/data.json'
 import Header from './components/header';
 import Main from './components/main';
 import Footer from './components/footer';
@@ -14,12 +14,28 @@ class App extends React.Component
       show:false,
       imageSrc:'',
       disc:'',
+      filteredData:JsonData,
     }
   }
 
+  handleFilter = (event) => {
+    if(event.target.value !== 'all')
+    {
+        const selectedHorns = Number(event.target.value);
+        const filtering = JsonData.filter( animal => animal.horns === selectedHorns );
+        this.setState({
+            filteredData:filtering,
+        });
+    }
+    else
+    this.setState({
+        filteredData:JsonData,
+    }); 
+}
+
   popCard = (event) => {
     this.setState({show:true});
-    data.forEach(animal => {
+    JsonData.forEach(animal => {
       if(animal.title === event.target.name)
       {
         this.setState({
@@ -36,7 +52,7 @@ class App extends React.Component
       <div>
         <Header />
         <SelectedBeast show={this.state.show}  handleClose={this.handleClose} imageSrc={this.state.imageSrc} description={this.state.disc} />
-        <Main  popCard={this.popCard}  />
+        <Main  popCard={this.popCard}  handleFilter={this.handleFilter} data={this.state.filteredData} />
         <Footer />
       </div>
     )
